@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@android:drawable/btn_star_big_on"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_prenda"
+            android:icon="@android:drawable/ic_input_add"
+            android:title="Añadir prenda" />
+        <item
+            android:id="@+id/nav_vestuario"
+            android:icon="@android:drawable/ic_input_get"
+            android:title="Vestuario" />
+
+    </group>
+
+
+</menu>

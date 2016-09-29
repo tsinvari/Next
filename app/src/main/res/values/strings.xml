@@ -1,0 +1,54 @@
+<resources>
+    <string name="app_name">Next</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string-array name="prenda">
+        <item> Elegir </item>
+        <item>Bufanda</item>
+        <item>Blusa</item>
+        <item>Blusa con escote</item>
+        <item>Camisa</item>
+        <item>Polera</item>
+        <item>Chompa</item>
+        <item>Pantalón</item>
+        <item>Jeans</item>
+        <item>Falda</item>
+        <item>Mini Falda</item>
+        <item>Vestido</item>
+        <item>Vestido con escote</item>
+    </string-array>
+    <string-array name="material">
+        <item> Elegir </item>
+        <item>Tela</item>
+        <item>Seda</item>
+        <item>Lana</item>
+        <item>Mezclilla</item>
+        <item>Polar</item>
+    </string-array>
+    <string-array name="color">
+        <item> Elegir </item>
+        <item>Blanco</item>
+        <item>Amarrillo</item>
+        <item>Rosado</item>
+        <item>Naranja</item>
+        <item>Guindo</item>
+        <item>Morado</item>
+        <item>Celeste</item>
+        <item>Verde</item>
+        <item>Verde Claro</item>
+        <item>Cafe</item>
+        <item>Negro</item>
+        <item>Plomo</item>
+    </string-array>
+    <string-array name="ocasion">
+        <item> Elegir </item>
+        <item>Trabajo</item>
+        <item>Fiesta</item>
+        <item>Deporte</item>
+        <item>Casa</item>
+        <item>Paseo</item>
+    </string-array>
+
+    <string name="action_settings">:P</string>
+</resources>
