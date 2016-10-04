@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main3"
@@ -23,6 +24,7 @@
         android:layout_weight="5"
         android:orientation="vertical">
         <ImageView
+            android:id="@+id/gen_image_view"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_margin="8dp"
@@ -39,12 +41,14 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="anterior"
                 android:text="Anterior"
                 />
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Anterior"/>
+                android:onClick="siguiente"
+                android:text="Siguiente"/>
         </LinearLayout>
     </LinearLayout>
     <LinearLayout
@@ -66,13 +70,12 @@
                     android:textSize="18sp"
                     />
 
-                <EditText
+                <TextView
                     android:id="@+id/temperatura_edit_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="16dp"
-                    android:hint="en grados"
-                    android:inputType="number"
+                    android:text=""
                     />
             </TableRow>
 

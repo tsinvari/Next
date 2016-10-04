@@ -20,11 +20,12 @@
     </string-array>
     <string-array name="material">
         <item> Elegir </item>
-        <item>Tela</item>
         <item>Seda</item>
         <item>Lana</item>
+        <item>Algodon</item>
+        <item>Poliester</item>
+        <item>Jean</item>
         <item>Mezclilla</item>
-        <item>Polar</item>
     </string-array>
     <string-array name="color">
         <item> Elegir </item>
@@ -49,6 +50,8 @@
         <item>Casa</item>
         <item>Paseo</item>
     </string-array>
+    <string name="open_weather_maps_app_id">d9edbd85570966665732e98cc60c47b4</string>
+    <string name="place_not_found">Sorry, no weather data found.</string>
 
     <string name="action_settings">:P</string>
 </resources>

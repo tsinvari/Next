@@ -29,6 +29,13 @@ public class Main2Activity extends AppCompatActivity {
 
     int counter = 0;
     DatabaseHelper CLOSEDB;
+    int prendaInt = 0;
+    String prendaStr = "";
+    int materialInt = 0;
+    int ocasionInt = 0;
+    Integer colorInt = 0;
+    int abrigoInt = 0;
+    int cuerpoInt = 0;
     private String userChoosenTask;
     private int REQUEST_CAMERA = 0, SELECT_FILE = 1;
     private ImageView ivImage;
@@ -42,7 +49,6 @@ public class Main2Activity extends AppCompatActivity {
         Spinner prendaSpinner = (Spinner) findViewById(R.id.prenda_spinner);
         Spinner materialSpinner = (Spinner) findViewById(R.id.material_spinner);
         Spinner ocasionSpinner = (Spinner) findViewById(R.id.ocasion_spinner);
-        Spinner colorSpinner = (Spinner) findViewById(R.id.color_spinner);
 
 
         ArrayAdapter<CharSequence> prendaAdapter = ArrayAdapter.createFromResource(this, prenda, android.R.layout.simple_spinner_item);
@@ -55,14 +61,11 @@ public class Main2Activity extends AppCompatActivity {
         materialSpinner.setAdapter(adapterMaterial);
 
 
-        ArrayAdapter<CharSequence> colorAdapter = ArrayAdapter.createFromResource(this, R.array.color, android.R.layout.simple_spinner_item);
-        colorAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        colorSpinner.setAdapter(colorAdapter);
-
-
         ArrayAdapter<CharSequence> ocasionAdapter = ArrayAdapter.createFromResource(this, R.array.ocasion, android.R.layout.simple_spinner_item);
         ocasionAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         ocasionSpinner.setAdapter(ocasionAdapter);
+
+
         openDB();
     }
 
@@ -73,42 +76,26 @@ public class Main2Activity extends AppCompatActivity {
     public void save (View v){
 
 
-        int prendaInt = 0;
-        String prendaStr = "";
-        int materialInt = 0;
-        int ocasionInt = 0;
-        int colorInt = 0;
-        int abrigoInt = 0;
-        int cuerpoInt = 0;
+
         Spinner prendaSpinner = (Spinner) findViewById(R.id.prenda_spinner);
         Spinner materialSpinner = (Spinner) findViewById(R.id.material_spinner);
         Spinner ocasionSpinner = (Spinner) findViewById(R.id.ocasion_spinner);
-        Spinner colorSpinner = (Spinner) findViewById(R.id.color_spinner);
 
-        if (prendaSpinner.getSelectedItemPosition()==0 || materialSpinner.getSelectedItemPosition()==0 || ocasionSpinner.getSelectedItemPosition()==0 || colorSpinner.getSelectedItemPosition()==0 || bm == null) {
+
+        if (prendaSpinner.getSelectedItemPosition()==0 || materialSpinner.getSelectedItemPosition()==0 || ocasionSpinner.getSelectedItemPosition()==0 || bm == null) {
             Toast toast1 = makeText(Main2Activity.this, "Debes llenar todos los campos", Toast.LENGTH_LONG);
             toast1.show();
         }else {
             prendaInt = prendaSpinner.getSelectedItemPosition();
             materialInt = materialSpinner.getSelectedItemPosition();
             ocasionInt = ocasionSpinner.getSelectedItemPosition();
-            colorInt = colorSpinner.getSelectedItemPosition();
+
             prendaStr = prendaSpinner.getSelectedItem().toString();
 
-            if (prendaInt > 1) {
-                if (prendaInt <= 5) {
-                    cuerpoInt = 2;
-                } else {
-                    if (prendaInt <= 10) {
-                        cuerpoInt = 3;
-                    } else {
-                        cuerpoInt = 4;
-                    }
-                }
-            } else {
-                cuerpoInt = 1;
-            }
-
+            int cuerpo [] = {0, 1, 2, 2, 2, 2, 2, 3, 3, 4, 4, 5, 5};
+            int material[] = {0,6,5,4,3,2,1};
+            cuerpoInt = cuerpo[prendaInt];
+            materialInt = material[materialInt];
 
             counter++;
             try {
@@ -128,9 +115,9 @@ public class Main2Activity extends AppCompatActivity {
                 Bitmap newPrendaBM = Bitmap.createBitmap(bm);
                 newPrendaBM.compress(Bitmap.CompressFormat.JPEG, 95, fOut);
                 MediaStore.Images.Media.insertImage(getContentResolver(), newPrendaBM, newPrendaFile.getAbsolutePath(), newPrendaFile.getName());
-                CLOSEDB.addPrenda(prendaStr, materialInt, colorInt, ocasionInt, abrigoInt, cuerpoInt, pathPrenda);
-               /* Toast toast = makeText(Main2Activity.this, "" + d, Toast.LENGTH_SHORT);
-                toast.show();*/
+                CLOSEDB.addPrenda(cuerpoInt, prendaStr, materialInt, colorInt, ocasionInt, pathPrenda);
+                Toast toast = makeText(Main2Activity.this, "Done!", Toast.LENGTH_SHORT);
+                toast.show();
             } catch (IOException e) {
                 return;
             }
@@ -139,7 +126,20 @@ public class Main2Activity extends AppCompatActivity {
         }
     }
 
+    public void selectColor (View v){
 
+        HSVColorPickerDialog cpd = new HSVColorPickerDialog( Main2Activity.this, 0xFF4488CC, new HSVColorPickerDialog.OnColorSelectedListener() {
+            @Override
+            public void colorSelected(Integer color) {
+               colorInt = color;
+             }
+        });
+        cpd.setTitle( "Pick a color" );
+        cpd.show();
+
+
+
+    }
 
     public void open(View v) {
         selectImage();
