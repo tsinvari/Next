@@ -1,4 +1,4 @@
-package com.example.android.next;
+package com.example.android.apptuendo;
 
 /**
  * Created by sir.tsinvari on 10/2/16.
@@ -129,7 +129,7 @@ public class HSVColorPickerDialog extends AlertDialog {
          * possible if {@link HSVColorPickerDialog#setNoColorButton(int) setNoColorButton()}
          * has been called on the dialog before showing it
          */
-        public void colorSelected( Integer color );
+        void colorSelected(Integer color);
     }
 
     private static class HSVColorWheel  extends View {

@@ -1,9 +1,26 @@
 <resources>
-    <string name="app_name">Next</string>
+    <string name="app_name">AppTuendo</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string-array name="prenda">
+    <string name="drawer_home">Home</string>
+    <string name="drawer_addPrenda">Añadir Prenda</string>
+    <string name="drawer_newOufit">Atuendo</string>
+    <string name="drawer_app_name">AppTuendo</string>
+    <string name="drawer_app_welcome">¿Qué vestirás hoy?</string>
+    <string name="main1_app_name">AppTuendo!!!</string>
+    <string name="main2_new_button">nueva imagen</string>
+    <string name="main2_color_button">Color</string>
+    <string name="main2_guardar_button">guardar prenda</string>
+    <string name="main2_prenda_text">prenda</string>
+    <string name="main2_material_text">material</string>
+    <string name="main2_ocasion_text">ocasion</string>
+    <string name="main2_atributos_text">atributos</string>
+    <string name="main3_ciudad_text">Ciudad</string>
+    <string name="main3_temperatura_text">Temperatura</string>
+    <string name="main3_generar_button">generar</string>
+
+    <string-array name="main2_prenda">
         <item> Elegir </item>
         <item>Bufanda</item>
         <item>Blusa</item>
@@ -18,7 +35,7 @@
         <item>Vestido</item>
         <item>Vestido con escote</item>
     </string-array>
-    <string-array name="material">
+    <string-array name="main2_material">
         <item> Elegir </item>
         <item>Seda</item>
         <item>Lana</item>
@@ -27,22 +44,7 @@
         <item>Jean</item>
         <item>Mezclilla</item>
     </string-array>
-    <string-array name="color">
-        <item> Elegir </item>
-        <item>Blanco</item>
-        <item>Amarrillo</item>
-        <item>Rosado</item>
-        <item>Naranja</item>
-        <item>Guindo</item>
-        <item>Morado</item>
-        <item>Celeste</item>
-        <item>Verde</item>
-        <item>Verde Claro</item>
-        <item>Cafe</item>
-        <item>Negro</item>
-        <item>Plomo</item>
-    </string-array>
-    <string-array name="ocasion">
+    <string-array name="main2_ocasion">
         <item> Elegir </item>
         <item>Trabajo</item>
         <item>Fiesta</item>
@@ -51,7 +53,6 @@
         <item>Paseo</item>
     </string-array>
     <string name="open_weather_maps_app_id">d9edbd85570966665732e98cc60c47b4</string>
-    <string name="place_not_found">Sorry, no weather data found.</string>
 
     <string name="action_settings">:P</string>
 </resources>

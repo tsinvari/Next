@@ -1,8 +1,7 @@
-package com.example.android.next;
+package com.example.android.apptuendo;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -23,9 +22,6 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-
-
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -36,7 +32,10 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
     }
 
-
+    public void prenda (View view) {
+        Intent openPrenda = new Intent(MainActivity.this, Main2Activity.class);
+        startActivity(openPrenda);
+    }
 
     @Override
     public void onBackPressed() {
@@ -49,11 +48,6 @@ public class MainActivity extends AppCompatActivity
     }
 
 
-
-    public void prenda (View view) {
-        Intent openPrenda = new Intent(MainActivity.this, Main2Activity.class);
-        startActivity(openPrenda);
-    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

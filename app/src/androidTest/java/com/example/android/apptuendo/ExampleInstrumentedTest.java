@@ -1,4 +1,4 @@
-package com.example.android.next;
+package com.example.android.apptuendo;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

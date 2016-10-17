@@ -1,4 +1,4 @@
-package com.example.android.next;
+package com.example.android.apptuendo;
 
 import android.Manifest;
 import android.annotation.TargetApi;
@@ -15,7 +15,7 @@ import android.support.v7.app.AlertDialog;
  * Created by tsinvari on 26-09-16.
  */
 
-public class Utility {
+class Utility {
     public static final int MY_PERMISSIONS_REQUEST_READ_EXTERNAL_STORAGE = 123;
     @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
     public static boolean checkPermission(final Context context)
@@ -27,8 +27,8 @@ public class Utility {
                 if (ActivityCompat.shouldShowRequestPermissionRationale((Activity) context, Manifest.permission.READ_EXTERNAL_STORAGE)) {
                     AlertDialog.Builder alertBuilder = new AlertDialog.Builder(context);
                     alertBuilder.setCancelable(true);
-                    alertBuilder.setTitle("Permission necessary");
-                    alertBuilder.setMessage("External storage permission is necessary");
+                    alertBuilder.setTitle("Permisos Necesarios");
+                    alertBuilder.setMessage("Permiso de acceso Memoria");
                     alertBuilder.setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
                         @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
                         public void onClick(DialogInterface dialog, int which) {
@@ -48,4 +48,6 @@ public class Utility {
             return true;
         }
     }
+
+
 }

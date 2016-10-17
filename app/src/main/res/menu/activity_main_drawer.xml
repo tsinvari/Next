@@ -5,15 +5,15 @@
         <item
             android:id="@+id/nav_home"
             android:icon="@android:drawable/btn_star_big_on"
-            android:title="Home" />
+            android:title="@string/drawer_home" />
         <item
             android:id="@+id/nav_prenda"
             android:icon="@android:drawable/ic_input_add"
-            android:title="Añadir prenda" />
+            android:title="@string/drawer_addPrenda" />
         <item
             android:id="@+id/nav_vestuario"
             android:icon="@android:drawable/ic_input_get"
-            android:title="Vestuario" />
+            android:title="@string/drawer_newOufit" />
 
     </group>
 

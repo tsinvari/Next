@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="160dp"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentTop="true"
+    >
+                <TextView
+                    android:id="@+id/prenda_text_view"
+                    android:layout_width="0dp"
+                    android:layout_height="160dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/background_light"
+                    android:text=""
+                    android:textSize="24sp"/>
+
+                <ImageView
+                    android:id="@+id/gen_image_view"
+                    android:layout_width="0dp"
+                    android:layout_height="160dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="4"
+                    android:background="@android:color/background_light"
+                    android:scaleType="fitCenter"
+                    />
+
+
+</LinearLayout>

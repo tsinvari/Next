@@ -1,4 +1,4 @@
-package com.example.android.next;
+package com.example.android.apptuendo;
 
 /**
  * Created by sir.tsinvari on 10/2/16.
@@ -13,7 +13,7 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-public class RemoteFetch {
+class RemoteFetch {
 
     private static final String OPEN_WEATHER_MAP_API =
             "http://api.openweathermap.org/data/2.5/weather?q=%s&units=metric";
@@ -30,8 +30,8 @@ public class RemoteFetch {
             BufferedReader reader = new BufferedReader(
                     new InputStreamReader(connection.getInputStream()));
 
-            StringBuffer json = new StringBuffer(1024);
-            String tmp="";
+            StringBuilder json = new StringBuilder(1024);
+            String tmp;
             while((tmp=reader.readLine())!=null)
                 json.append(tmp).append("\n");
             reader.close();
